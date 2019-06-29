@@ -1,0 +1,265 @@
+* {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+body {
+  background-color: #181c20;
+}
+
+.title {
+  text-align: center;
+  font-family: "Audiowide", cursive;
+  -webkit-font-smoothing: antialiased;
+  font-size: 60px;
+  background-image: linear-gradient(
+    to left,
+    #d0d3cf,
+    #448e64,
+    #d7a318,
+    #447491,
+    #cf3a22
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.racing-track {
+  display: flex;
+  z-index: 10;
+}
+
+.racing-track-animal {
+  height: 68px;
+  position: absolute;
+  z-index: 10;
+  min-width: 125px;
+  transition: 300ms linear;
+}
+
+.animal-face {
+  position: absolute;
+  bottom: 0;
+  width: 181px;
+  right: -156px;
+  transition: 300ms linear;
+}
+
+.circuit {
+  border: 10px solid #42494e;
+  background: url("images/track-bg.png") no-repeat;
+  background-size: cover;
+  width: 680px;
+  margin-top: 10px;
+  display: flex;
+  height: 415px;
+  position: relative;
+  flex-direction: column;
+  margin-left: 5px;
+}
+
+.pixels-text {
+  text-align: right;
+  position: relative;
+  z-index: 1;
+  padding-right: 20px;
+  line-height: 68px;
+  font-size: 26px;
+  font-family: "Audiowide", cursive;
+  -webkit-font-smoothing: antialiased;
+  color: #00000066;
+}
+
+.hare {
+  background-color: #d0d3cf;
+}
+
+.hare-fix {
+  right: -86px;
+}
+
+.tortoise {
+  background-color: #448e64;
+}
+
+.corgi {
+  background-color: #d7a318;
+}
+
+.corgi-fix {
+  right: -159px;
+}
+
+.cockatiel {
+  background-color: #447491;
+}
+
+.pig {
+  background-color: #cf3a22;
+}
+
+.pig-fix {
+  right: -159px;
+}
+
+.space-between-first {
+  margin-top: 50px;
+}
+
+.space-between {
+  margin-top: 68px;
+}
+
+.game {
+  width: 1050px;
+  margin: auto;
+  margin-top: -40px;
+}
+
+.votes,
+.game {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+h3 {
+  padding: 5px 20px;
+  font-family: "Audiowide", cursive;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+}
+
+.team {
+  flex-shrink: 0;
+  text-align: center;
+  margin-right: 15px;
+  width: 85px;
+  justify-content: space-between;
+  transform: skewX(-10deg);
+  padding: 5px 20px;
+  font-family: "Audiowide", cursive;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hare-team,
+.white {
+  background-color: #d0d3cf;
+  color: #000;
+}
+
+.tortoise-team,
+.green {
+  background-color: #448e64;
+  color: #fff;
+}
+
+.corgi-team,
+.yellow {
+  background-color: #d7a318;
+  color: #fff;
+}
+
+.cockatiel-team,
+.blue {
+  background-color: #447491;
+  color: #fff;
+}
+
+.pig-team,
+.red {
+  background-color: #cf3a22;
+  color: #fff;
+}
+
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  transform: skewX(-10deg);
+  background-color: #37474f;
+  margin-left: 8px;
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  min-width: 460px;
+  max-width: 540px;
+  font-family: "Audiowide", cursive;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-inner {
+  width: 160px;
+  height: 100px;
+  background: url("images/play.png") no-repeat center;
+  transform: translateX(0px) translateY(0px);
+  transition: all 0.1s ease-out;
+}
+
+.btn-txt {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-top: 30px;
+  color: #448e63;
+}
+
+.btn.disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.btn:hover:not(.disabled),
+.btn:active:not(.disabled) {
+  transition: all 0.1s ease-out;
+  background-color: #385e48;
+  transition: all 0.1s ease-out;
+}
+
+.btn:hover:not(.disabled) .btn-inner,
+.btn:hover:not(.disabled) .btn-img,
+.btn:hover .btn-effect {
+  transform: translateX(10px) translateY(-12px);
+  transition: all 0.1s ease-out;
+}
+
+.btn-fix {
+  min-width: 220px;
+  line-height: 60px;
+  color: #d0d3cf;
+  font-size: 50px;
+}
+
+.center {
+  margin: auto;
+}
+
+.btn-fix:hover {
+  cursor: default !important;
+  background-color: #37474f !important;
+}
+
+.btn-votes {
+  padding-left: 20px;
+  display: block;
+  min-width: 300px;
+  min-height: 615px;
+  color: #d0d3cf;
+  font-size: 20px;
+  transform: skewX(0deg);
+}
+
+.s_size {
+  font-size: 20px;
+}
+
+.twitch-votes {
+  color: #fff;
+}
+
+.twitch-name {
+  height: 30px;
+  list-style: none;
+  font-size: 14px;
+  list-style: none;
+}

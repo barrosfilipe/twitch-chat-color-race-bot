@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Twitch Chat Color Race</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body>
+    <h1 class="title">Twitch Chat Color Race</h1>
+
+    <div class="game">
+      <div class="scene">
+        <div class="votes">
+          <div
+            class="btn"
+            id="start-vote"
+            onmouseenter="enterPlayButton()"
+            onmouseleave="leavePlayButton()"
+            onclick="clickPlayButton()"
+          >
+            <div class="btn-inner"></div>
+            <div class="btn-txt">&nbsp; Start Vote !</div>
+          </div>
+
+          <div class="btn btn-fix">
+            <div class="center">
+              <span id="countdown">30</span>
+              <span class="s_size">sec</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="votes">
+          <div id="white_count" class="team hare-team">0</div>
+          <div id="green_count" class="team tortoise-team">0</div>
+          <div id="yellow_count" class="team corgi-team">0</div>
+          <div id="blue_count" class="team cockatiel-team">0</div>
+          <div id="red_count" class="team pig-team">0</div>
+        </div>
+
+        <div class="circuit">
+          <!-- Hare -->
+          <div class="racing-track space-between-first">
+            <div id="hare" class="racing-track-animal hare">
+              <div id="hare_px" class="pixels-text">125px</div>
+              <img
+                src="images/hare.svg"
+                class="animal-face hare-fix"
+                alt="Hare"
+              />
+            </div>
+          </div>
+
+          <!-- Tortoise -->
+          <div class="racing-track space-between">
+            <div id="tortoise" class="racing-track-animal tortoise">
+              <div id="tortoise_px" class="pixels-text">125px</div>
+              <img
+                src="images/tortoise.svg"
+                class="animal-face"
+                alt="Tortoise"
+              />
+            </div>
+          </div>
+
+          <!-- Corgi -->
+          <div class="racing-track space-between">
+            <div id="corgi" class="racing-track-animal corgi">
+              <div id="corgi_px" class="pixels-text">125px</div>
+              <img
+                src="images/corgi.svg"
+                class="animal-face corgi-fix"
+                alt="Corgi"
+              />
+            </div>
+          </div>
+
+          <!-- Cockatiel -->
+          <div class="racing-track space-between">
+            <div id="cockatiel" class="racing-track-animal cockatiel">
+              <div id="cockatiel_px" class="pixels-text">125px</div>
+              <img
+                src="images/cockatiel.svg"
+                class="animal-face"
+                alt="Cockatiel"
+              />
+            </div>
+          </div>
+
+          <!-- Pig -->
+          <div class="racing-track space-between">
+            <div id="pig" class="racing-track-animal pig">
+              <div id="pig_px" class="pixels-text">125px</div>
+              <img src="images/pig.svg" class="animal-face pig-fix" alt="Pig" />
+            </div>
+          </div>
+        </div>
+
+        <div id="winner" style="display: none"></div>
+      </div>
+
+      <div class="twitch-votes">
+        <div class="btn btn-fix btn-votes">
+          <p>- Twitch Chat Votes -</p>
+          <div
+            id="list"
+            style="overflow-y: auto; height: 500px; margin-right: 30px;"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Socket.io and Game Engine -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="sfx.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
