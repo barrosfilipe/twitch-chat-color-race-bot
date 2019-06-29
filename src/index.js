@@ -70,7 +70,7 @@ io.on("connection", socket => {
     io.emit("say-go");
     twitchUsersColorVotes.length = 0;
     stopTimerSocketRefresh = false;
-    startCountdown(5);
+    startCountdown(30);
   });
 
   socket.on("disconnect", _ => (stopTimerSocketRefresh = true));
