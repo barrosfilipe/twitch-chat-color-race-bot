@@ -1,6 +1,9 @@
 {
   "name": "twitch-chat-color-race",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=7.10.1"
+  },
   "scripts": {
     "start": "nodemon ./src"
   },
