@@ -5,6 +5,8 @@
 
 <h3 align="center">It uses <i>Express</i>, <i>Socket.io</i> and <i>Twitch API</i></h3>
 
+[Watch a demo video here!](https://streamable.com/u1yzy)
+
 ## Usage
 
 Clone this repository `git clone https://github.com/barrosfilipe/twitch-chat-color-race-bot.git`
